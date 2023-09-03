@@ -23,8 +23,9 @@ def correct_data():
             contact = row.split(",")
             num = input("Для смены фамилии нажми 0, имени - 1, отчества - 2, телефона - 3 ")
             contact[int(num)] = input("Введите новые данные: ")
-            with open(file_name + '.txt', 'w', encoding='utf-8') as file:
-                file.write(",".join(contact))
+    with open(file_name + '.txt', 'w', encoding='utf-8') as file:
+        file.write(",".join(contact))
+    print('Контакт изменен.')
     # choise_num = int(input('Выберите элемент, который хотите заменить\n'
     #     '0 - Фамилия\n'
     #     '1 - Имя\n'
