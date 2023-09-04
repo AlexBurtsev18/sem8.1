@@ -20,11 +20,11 @@ def correct_data():
     file_name = input('Введите имя файла: ')
     with open(file_name + '.txt', 'r', encoding='utf-8') as file:
         for row in file:
-            contact = row.split(",")
+            contact = row.split(" ")
             num = input("Для смены фамилии нажми 0, имени - 1, отчества - 2, телефона - 3 ")
             contact[int(num)] = input("Введите новые данные: ")
     with open(file_name + '.txt', 'w', encoding='utf-8') as file:
-        file.write(",".join(contact))
+        file.writelines(" ".join(contact))
     print('Контакт изменен.')
     # choise_num = int(input('Выберите элемент, который хотите заменить\n'
     #     '0 - Фамилия\n'
